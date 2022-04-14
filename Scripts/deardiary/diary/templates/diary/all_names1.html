@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<button onclick="document.location='/makeEntry'">Add New</button>
+<ul>
+{%for e in cont.entries.all %}
+  <li><a href="/viewEntry/{{e.id}}">
+{{ e.name }}
+  </a><button onclick="document.location='/deleteEntry/{{e.id}}'">del</button></li>
+  {%endfor%}
+</ul>
+<button onclick="document.location='/logout'">Logout</button>
+  </body>
+</html>

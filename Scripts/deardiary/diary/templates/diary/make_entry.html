@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .continue-application {
+      --color: #fff;
+      --background: #404660;
+      --background-hover: #3A4059;
+      --background-left: #2B3044;
+      --folder: #F3E9CB;
+      --folder-inner: #BEB393;
+      --paper: #FFFFFF;
+      --paper-lines: #BBC1E1;
+      --paper-behind: #E1E6F9;
+      --pencil-cap: #fff;
+      --pencil-top: #275EFE;
+      --pencil-middle: #fff;
+      --pencil-bottom: #5C86FF;
+      --shadow: rgba(13, 15, 25, .2);
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      border-radius: 5px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 15px;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      padding: 17px 521px 17px 69px;
+      -webkit-transition: background .3s;
+      transition: background .3s;
+      color: var(--color);
+      background: var(--bg, var(--background));
+    }
+    .continue-application > div {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 53px;
+      position: absolute;
+      overflow: hidden;
+      border-radius: 5px 0 0 5px;
+      background: var(--background-left);
+    }
+    .continue-application > div .folder {
+      width: 23px;
+      height: 27px;
+      position: absolute;
+      left: 15px;
+      top: 13px;
+    }
+    .continue-application > div .folder .top {
+      left: 0;
+      top: 0;
+      z-index: 2;
+      position: absolute;
+      -webkit-transform: translateX(var(--fx, 0));
+              transform: translateX(var(--fx, 0));
+      -webkit-transition: -webkit-transform 0.4s ease var(--fd, 0.3s);
+      transition: -webkit-transform 0.4s ease var(--fd, 0.3s);
+      transition: transform 0.4s ease var(--fd, 0.3s);
+      transition: transform 0.4s ease var(--fd, 0.3s), -webkit-transform 0.4s ease var(--fd, 0.3s);
+    }
+    .continue-application > div .folder .top svg {
+      width: 24px;
+      height: 27px;
+      display: block;
+      fill: var(--folder);
+      -webkit-transform-origin: 0 50%;
+              transform-origin: 0 50%;
+      -webkit-transition: -webkit-transform 0.3s ease var(--fds, 0.45s);
+      transition: -webkit-transform 0.3s ease var(--fds, 0.45s);
+      transition: transform 0.3s ease var(--fds, 0.45s);
+      transition: transform 0.3s ease var(--fds, 0.45s), -webkit-transform 0.3s ease var(--fds, 0.45s);
+      -webkit-transform: perspective(120px) rotateY(var(--fr, 0deg));
+              transform: perspective(120px) rotateY(var(--fr, 0deg));
+    }
+    .continue-application > div .folder:before, .continue-application > div .folder:after,
+    .continue-application > div .folder .paper {
+      content: '';
+      position: absolute;
+      left: var(--l, 0);
+      top: var(--t, 0);
+      width: var(--w, 100%);
+      height: var(--h, 100%);
+      border-radius: 1px;
+      background: var(--b, var(--folder-inner));
+    }
+    .continue-application > div .folder:before {
+      box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
+      -webkit-transform: translateX(var(--fx, 0));
+              transform: translateX(var(--fx, 0));
+      -webkit-transition: -webkit-transform 0.4s ease var(--fd, 0.3s);
+      transition: -webkit-transform 0.4s ease var(--fd, 0.3s);
+      transition: transform 0.4s ease var(--fd, 0.3s);
+      transition: transform 0.4s ease var(--fd, 0.3s), -webkit-transform 0.4s ease var(--fd, 0.3s);
+    }
+    .continue-application > div .folder:after,
+    .continue-application > div .folder .paper {
+      --l: 1px;
+      --t: 1px;
+      --w: 21px;
+      --h: 25px;
+      --b: var(--paper-behind);
+    }
+    .continue-application > div .folder:after {
+      -webkit-transform: translate(var(--pbx, 0), var(--pby, 0));
+              transform: translate(var(--pbx, 0), var(--pby, 0));
+      -webkit-transition: -webkit-transform 0.4s ease var(--pbd, 0s);
+      transition: -webkit-transform 0.4s ease var(--pbd, 0s);
+      transition: transform 0.4s ease var(--pbd, 0s);
+      transition: transform 0.4s ease var(--pbd, 0s), -webkit-transform 0.4s ease var(--pbd, 0s);
+    }
+    .continue-application > div .folder .paper {
+      z-index: 1;
+      --b: var(--paper);
+    }
+    .continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+      content: '';
+      width: var(--wp, 14px);
+      height: 2px;
+      border-radius: 1px;
+      -webkit-transform: scaleY(0.5);
+              transform: scaleY(0.5);
+      left: 3px;
+      top: var(--tp, 3px);
+      position: absolute;
+      background: var(--paper-lines);
+      box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+    }
+    .continue-application > div .folder .paper:after {
+      --tp: 6px;
+      --wp: 10px;
+    }
+    .continue-application > div .pencil {
+      height: 2px;
+      width: 3px;
+      border-radius: 1px 1px 0 0;
+      top: 8px;
+      left: 105%;
+      position: absolute;
+      z-index: 3;
+      -webkit-transform-origin: 50% 19px;
+              transform-origin: 50% 19px;
+      background: var(--pencil-cap);
+      -webkit-transform: translateX(var(--pex, 0)) rotate(35deg);
+              transform: translateX(var(--pex, 0)) rotate(35deg);
+      -webkit-transition: -webkit-transform 0.4s ease var(--pbd, 0s);
+      transition: -webkit-transform 0.4s ease var(--pbd, 0s);
+      transition: transform 0.4s ease var(--pbd, 0s);
+      transition: transform 0.4s ease var(--pbd, 0s), -webkit-transform 0.4s ease var(--pbd, 0s);
+    }
+    .continue-application > div .pencil:before, .continue-application > div .pencil:after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: var(--b, linear-gradient(var(--pencil-top) 55%, var(--pencil-middle) 55.1%, var(--pencil-middle) 60%, var(--pencil-bottom) 60.1%));
+      width: var(--w, 5px);
+      height: var(--h, 20px);
+      border-radius: var(--br, 2px 2px 0 0);
+      top: var(--t, 2px);
+      left: var(--l, -1px);
+    }
+    .continue-application > div .pencil:before {
+      -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+              clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+    }
+    .continue-application > div .pencil:after {
+      --b: none;
+      --w: 3px;
+      --h: 6px;
+      --br: 0 2px 1px 0;
+      --t: 3px;
+      --l: 3px;
+      border-top: 1px solid var(--pencil-top);
+      border-right: 1px solid var(--pencil-top);
+    }
+    .continue-application:before, .continue-application:after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      border-radius: 1px;
+      background: var(--color);
+      -webkit-transform-origin: 9px 1px;
+              transform-origin: 9px 1px;
+      -webkit-transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+              transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+      top: 26px;
+      right: 16px;
+      -webkit-transition: -webkit-transform .3s;
+      transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition: transform .3s, -webkit-transform .3s;
+    }
+    .continue-application:after {
+      --r: 45deg;
+    }
+    .continue-application:hover {
+      --cx: 2px;
+      --bg: var(--background-hover);
+      --fx: -40px;
+      --fr: -60deg;
+      --fd: .15s;
+      --fds: 0s;
+      --pbx: 3px;
+      --pby: -3px;
+      --pbd: .15s;
+      --pex: -24px;
+    }
+
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-success">
+      <a class="navbar-brand" href="/">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M3.214 1.072C4.813.752 6.916.71 8.354 2.146A.5.5 0 0 1 8.5 2.5v11a.5.5 0 0 1-.854.354c-.843-.844-2.115-1.059-3.47-.92-1.344.14-2.66.617-3.452 1.013A.5.5 0 0 1 0 13.5v-11a.5.5 0 0 1 .276-.447L.5 2.5l-.224-.447.002-.001.004-.002.013-.006a5.017 5.017 0 0 1 .22-.103 12.958 12.958 0 0 1 2.7-.869zM1 2.82v9.908c.846-.343 1.944-.672 3.074-.788 1.143-.118 2.387-.023 3.426.56V2.718c-1.063-.929-2.631-.956-4.09-.664A11.958 11.958 0 0 0 1 2.82z"/>
+      <path fill-rule="evenodd" d="M12.786 1.072C11.188.752 9.084.71 7.646 2.146A.5.5 0 0 0 7.5 2.5v11a.5.5 0 0 0 .854.354c.843-.844 2.115-1.059 3.47-.92 1.344.14 2.66.617 3.452 1.013A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.276-.447L15.5 2.5l.224-.447-.002-.001-.004-.002-.013-.006-.047-.023a12.582 12.582 0 0 0-.799-.34 12.96 12.96 0 0 0-2.073-.609zM15 2.82v9.908c-.846-.343-1.944-.672-3.074-.788-1.143-.118-2.387-.023-3.426.56V2.718c1.063-.929 2.631-.956 4.09-.664A11.956 11.956 0 0 1 15 2.82z"/>
+    </svg>DearDiary</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/">
+    Hello, {{ request.session.user_name }}
+              </a>
+          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                          <?xml version="1.0" encoding="iso-8859-1"?>
+    <svg width="20px" height="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	viewBox="0 0 512 512" style="enable-background:new 0 0 1 1;" xml:space="preserve">
+    <g><g><g>
+    			<path d="M510.371,226.513c-1.088-2.603-2.645-4.971-4.629-6.955l-63.979-63.979c-8.341-8.32-21.824-8.32-30.165,0
+    				c-8.341,8.341-8.341,21.845,0,30.165l27.584,27.584H320.013c-11.797,0-21.333,9.557-21.333,21.333s9.536,21.333,21.333,21.333
+    				h119.168l-27.584,27.584c-8.341,8.341-8.341,21.845,0,30.165c4.16,4.181,9.621,6.251,15.083,6.251s10.923-2.069,15.083-6.251
+    				l63.979-63.979c1.984-1.963,3.541-4.331,4.629-6.955C512.525,237.606,512.525,231.718,510.371,226.513z"/>
+    			<path d="M362.68,298.667c-11.797,0-21.333,9.557-21.333,21.333v106.667h-85.333V85.333c0-9.408-6.187-17.728-15.211-20.437
+    				l-74.091-22.229h174.635v106.667c0,11.776,9.536,21.333,21.333,21.333s21.333-9.557,21.333-21.333v-128
+    				C384.013,9.557,374.477,0,362.68,0H21.347c-0.768,0-1.451,0.32-2.197,0.405c-1.003,0.107-1.92,0.277-2.88,0.512
+    				c-2.24,0.576-4.267,1.451-6.165,2.645c-0.469,0.299-1.045,0.32-1.493,0.661C8.44,4.352,8.376,4.587,8.205,4.715
+    				C5.88,6.549,3.939,8.789,2.531,11.456c-0.299,0.576-0.363,1.195-0.597,1.792c-0.683,1.621-1.429,3.2-1.685,4.992
+    				c-0.107,0.64,0.085,1.237,0.064,1.856c-0.021,0.427-0.299,0.811-0.299,1.237V448c0,10.176,7.189,18.923,17.152,20.907
+    				l213.333,42.667c1.387,0.299,2.795,0.427,4.181,0.427c4.885,0,9.685-1.685,13.525-4.843c4.928-4.053,7.808-10.091,7.808-16.491
+    				v-21.333H362.68c11.797,0,21.333-9.557,21.333-21.333V320C384.013,308.224,374.477,298.667,362.68,298.667z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+    Log Out
+                        </a>
+                    </li>
+                </ul>
+      </div>
+    </nav>
+<div class="container"  style="margin-top:60px">
+
+<form action="/saveEntry" method="post" style="margin-top:60px">
+      {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title :</label>
+    <input type="text" name="dname" class="form-control" id="exampleFormControlInput1">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Diary Entry :</label>
+    <textarea class="form-control" name="dentry" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+<button class="continue-application" style="padding-left:520px;" type="submit">
+<div>
+<div class="pencil"></div>
+<div class="folder">
+<div class="top">
+<svg viewBox="0 0 24 27">
+<path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+</svg>
+</div>
+<div class="paper"></div>
+</div>
+</div>
+WRITE
+</button>
+
+</form>
+</div>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </body>
+</html>

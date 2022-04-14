@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>CodePen Demo</title>
+<meta name="robots" content="noindex">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<link rel="canonical" href="https://codepen.io/collinscode/pen/qYdxKp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-KwxQKNj2D0XKEW5O/Y6haRH39PE/xry8SAoLbpbCMraqlX7kUP6KHOnrlrtvuJLR" crossorigin="anonymous">
+<style class="INLINE_PEN_STYLESHEET_ID">
+    html {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+html body {
+  margin: 0;
+  background: #2980b9;
+  background: -webkit-gradient(linear, left top, right top, from(#2980b9), to(#2c3e50));
+  background: linear-gradient(to right, #2980b9, #2c3e50);
+  font-family: 'Montserrat', sans-serif;
+}
+.heading {
+  color: #fff;
+  text-align: center;
+}
+.heading h1 {
+  margin-bottom: 3rem;
+  font-weight: 300;
+  position: relative;
+}
+.heading h1:after {
+  content: '';
+  height: 2px;
+  width: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+}
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+}
+.container .nav {
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  margin: 0 -3rem 2rem;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+.container .nav:before,
+.container .nav:after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  border: 0.75rem solid transparent;
+  border-bottom: 0.75rem solid #f2f0f0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  z-index: -1;
+}
+.container .nav:before {
+  left: 0;
+  -webkit-transform: translateY(-0.45rem) rotate(135deg) translateX(-0.4rem);
+          transform: translateY(-0.45rem) rotate(135deg) translateX(-0.4rem);
+}
+.container .nav:after {
+  right: 0;
+  -webkit-transform: translateY(-0.45rem) rotate(-135deg) translateX(0.4rem);
+          transform: translateY(-0.45rem) rotate(-135deg) translateX(0.4rem);
+}
+.container .nav a {
+  display: inline-block;
+  margin: 0 3rem;
+  font-size: 2rem;
+  color: #2980b9;
+  opacity: 0.7;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .nav a:hover {
+  opacity: 1;
+}
+.container .list .num {
+  padding: 0.5rem 2rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(0):before {
+  content: '0';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(1):before {
+  content: '1';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(2):before {
+  content: '2';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(3):before {
+  content: '3';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(4):before {
+  content: '4';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(5):before {
+  content: '5';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(6):before {
+  content: '6';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(7):before {
+  content: '7';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(8):before {
+  content: '8';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:nth-child(9):before {
+  content: '9';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  opacity: 0.05;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num h3 {
+  position: relative;
+  left: -1.5rem;
+  color: #3d3d3d;
+  font-size: 0.85rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.container .list .num:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.container .list .num:hover:before {
+  opacity: 0.2;
+}
+.container .list .num:hover h3 {
+  left: 1rem;
+}
+.message {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+  </style>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeConsoleRunner-7f4d47902dc785f30dedcac9c996b9f31d4dfcc33567cc48f0431bc918c2bf05.js"></script>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-e03f509ba0a671350b4b363ff105b2eb009850f34a2b4deaadaa63ed5d970b37.js"></script>
+<script src="https://static.codepen.io/assets/editor/iframe/iframeRuntimeErrors-29f059e28a3c6d3878960591ef98b1e303c1fe1935197dae7797c017a3ca1e82.js"></script>
+</head>
+<body class="vsc-initialized">
+
+<div class="container">
+<button onclick="document.location='/makeEntry'">Add New</button>
+<div class="list">
+
+  {%for e in cont.entries.all %}
+    <a href="/viewEntry/{{e.id}}"><div class="num">
+  <h3>{{ e.name }}</h3>
+    <button onclick="document.location='/deleteEntry/{{e.id}}'">del</button>
+  </div></a>
+    {%endfor%}
+
+</div>
+</div>
+<button onclick="document.location='/logout'">Logout</button>
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script id="INLINE_PEN_JS_ID">
+
+    //# sourceURL=pen.js
+  </script>
+
+</body>
+</html>

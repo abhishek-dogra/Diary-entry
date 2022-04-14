@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<h1>Dear Diary</h1>
+<form class="" action="/log_check" method="post">
+{%csrf_token%}
+Enter Email : <input type="text" name="email" value=""/>
+Password : <input type="password" name="pass" value=""/>
+<button type="submit" name="button">login</button>
+</form>
+<a href="/register">register here</a>
+</body>
+</html>

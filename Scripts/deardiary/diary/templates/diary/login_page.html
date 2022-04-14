@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <script src="https://kit.fontawesome.com/7d49a94ec5.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'diaryst/font1.css' %}">
+
+    <link rel="stylesheet" href="{% static 'diaryst/styles.css' %}">
+
+</head>
+<body>
+
+    <div class="main1">
+
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="{% static 'diaryst/images/signin-image.jpg' %}" alt="sing up image"></figure>
+                        <a href="/register" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Log in</h2>
+                        <form action="/log_check" method="post" class="register-form" id="login-form">
+                          {% csrf_token %}
+                            <div class="form-group">
+                                <label for="your_name"><i class="far fa-envelope"></i></label>
+                                <input type="text" name="email" id="your_name" placeholder="Your E-mail" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="fas fa-lock"></i></label>
+                                <input type="password" name="pass" id="your_pass" placeholder="Password" required/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
